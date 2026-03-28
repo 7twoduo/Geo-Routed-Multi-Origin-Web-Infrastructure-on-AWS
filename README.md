@@ -57,6 +57,14 @@ This demonstrates:
 - Infrastructure as Code with Terraform
 
 ---
+# DEMO
+
+# USA
+
+https://github.com/user-attachments/assets/b210304c-fcb3-4329-93ca-afcb773b4ed8
+
+# BRAZIL
+https://github.com/user-attachments/assets/3492f7c2-0966-43d8-91d3-71a3739647dd
 
 ## What this builds
 
@@ -140,39 +148,37 @@ This demonstrates:
 
 ##  PROJECT STRUCTURE
 
+```text
 .
 ├── build/
 │   └── geo_router.zip
 ├── lambda/
 │   └── geo_router.js.tftpl
 ├── scripts/
-├── ec2-webpage.sh
-├── ec2-webpage2.sh
+│   ├── ec2-webpage.sh
+│   └── ec2-webpage2.sh
+│   └── quick-run.sh
+├── .gitignore
+├── README.md
 ├── main.tf
-├── var.tf
 ├── output.tf
 ├── terraform.lock.hcl
-└── README.md
+└── var.tf
+```
 
-Terraform versions
-
-Terraform v1.14.8
-
-AWS provider ~> 6.36.0
-
-Archive provider ~> 2.7.1
-
-Quick start
+#   Quick start
 
 1. Clone the repository
 
-2.git clone https://github.com7twoduo/Geo-Routed-Multi-Origin-Web-Infrastructure-on-AWS.git
+2. git clone https://github.com7twoduo/Geo-Routed-Multi-Origin-Web-Infrastructure-on-AWS.git
 
-3.cd Geo-Routed-Multi-Origin-Web-Infrastructure-on-AWS
+3. cd Geo-Routed-Multi-Origin-Web-Infrastructure-on-AWS
 
 4. Review the backend config
 
 Update the backend bucket if needed:
+
+```text
 
 terraform {
   backend "s3" {
@@ -181,56 +187,77 @@ terraform {
     region = "us-east-1"
   }
 }
-3. Set your variables
+```
+5. cd Geo-Routed-Multi-Origin-Web-Infrastructure-on-AWS/scripts
+```text
+In the terminal, run ./quick-apply.sh
+```
 
-Create terraform.tfvars:
-
-vpc_cidr           = "10.0.0.0/16"
-subnet_cidr1       = "10.0.1.0/24"
-subnet_cidr2       = "10.0.2.0/24"
-public_access_cidr = "0.0.0.0/0"
-origin_verify      = "your-secret-header-value"
-4. Initialize Terraform
-terraform init
-5. Review the plan
-terraform plan
-6. Deploy
-terraform apply
-7. Get the CloudFront URL
 
 After deployment, grab the CloudFront domain from Terraform output and open it in a browser.
 
 It should look like:
 
 https://xxxxxxxxxxxx.cloudfront.net
-Expected behavior
+
+## Expected behavior
+
 Users hit a single CloudFront endpoint
+
 Lambda@Edge chooses the origin based on viewer location
+
 Traffic is forwarded to either:
+
 Brazil ALB
+
 US/default ALB
+
 Each ALB forwards to its attached EC2 instance
+
 The returned page differs depending on the routed backend
-Security notes
+
+## Tear down
+
+To remove the infrastructure:
+
+Run
+
+terraform destroy
+
+In the Root Directory with the main.tf,var.tf,output.tf
+
+## Security notes
 
 This project uses:
 
 Security groups for ALB and EC2
+
 CloudFront as the public global entry point
+
 IAM role for Lambda@Edge
+
 Route-based separation of backend origins
-Current demo-style limitations
+
+# Current demo-style limitations
 
 This is intentionally built as a portfolio/demo architecture, so there are a few production improvements that could be added later:
 
 Restrict EC2 HTTP access to only the ALB security group
+
 Move SSH access behind a tighter CIDR or bastion/SSM
+
 Add HTTPS on the ALBs
+
 Add a custom domain with ACM instead of default CloudFront certificate
+
 Add AWS WAF in front of CloudFront
+
 Add structured logging and alerting
+
 Add autoscaling groups instead of single instances
-Problems encountered
+
+# Problems encountered
+
 1. Lambda@Edge packaging
 
 Lambda@Edge requires a deployable zip artifact, so the JavaScript template is rendered and zipped before deployment.
@@ -247,56 +274,40 @@ Routing decisions depend on forwarded CloudFront viewer headers, so cache and or
 
 The backend is stored in S3, and local lockfile behavior may require adjustment depending on workflow.
 
-Why this project matters
+### Why this project matters
 
 This project shows practical understanding of:
 
 AWS networking
+
 Edge computing
+
 CDN behavior
+
 CloudFront origin design
+
 Lambda@Edge request manipulation
+
 Load balancing
+
 Terraform-based infrastructure provisioning
 
-This is the kind of architecture pattern used when building systems that need:
 
-low-latency content delivery
-regional request steering
-edge logic before origin selection
-globally distributed entry points with centralized control
-Future improvements
-Route 53 custom domain
-ACM certificate for a branded domain
-AWS WAF
-CloudWatch dashboards and alarms
-Auto Scaling Groups
-Blue/green origin switching
-Header-based origin verification enforcement
-More regions and more origin choices
-Better separation into Terraform modules
-Tear down
 
-To remove the infrastructure:
-
-terraform destroy
 Author
 
 Built as a production-inspired AWS edge routing project using:
 
 Terraform
+
 CloudFront
+
 Lambda@Edge
+
 Application Load Balancers
+
 EC2
 
 The goal of this repository is to demonstrate real infrastructure patterns, not just a basic static deployment.
 
 ⭐ If this project helped you or gave you ideas, consider starring the repository.
-
-
-A couple of cleanup notes before you use it: your pasted markdown file is for a different AWS RAG project, so I did not reuse those Bedrock-specific sections; instead I aligned the README to the Terraform for this geo-routing repo. :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3}
-
-The most important pieces I matched from your actual code were the two ALBs and two EC2 instances, the Lambda@Edge `origin-request` association, and the CloudFront viewer country/city routing headers. :contentReference[oaicite:4]{index=4}
-
-Send the GIF/image asset links and I’ll drop them into the README exactly where they belong.
