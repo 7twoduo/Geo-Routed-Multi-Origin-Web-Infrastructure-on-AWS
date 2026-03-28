@@ -199,6 +199,14 @@ After deployment, grab the CloudFront domain from Terraform output and open it i
 It should look like:
 
 https://xxxxxxxxxxxx.cloudfront.net
+# Testing
+1) Go to the cloudfront link and it should take you the US Server
+
+2) To test the Brazil Origin, Get UrbanVPN and set it to Brazil
+
+3) This changes your IP to simulate the IP of someone in brazil and now you can access the Brazil server
+
+4) Proving the edge function works
 
 ## Expected behavior
 
