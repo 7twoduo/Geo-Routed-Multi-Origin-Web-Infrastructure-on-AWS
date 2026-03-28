@@ -73,25 +73,6 @@ This demonstrates:
 
 ---
 
-## Architecture
-
-<!-- Replace with your generated architecture image -->
-<img src="YOUR_ARCHITECTURE_IMAGE_URL_HERE" alt="Architecture diagram" width="100%" />
-
-### Request flow
-
-```text
-User
-  ↓
-CloudFront Distribution
-  ↓
-CloudFront cache behavior
-  ↓
-Lambda@Edge (origin-request)
-  ├── Route to Brazil origin → ALB (alb_br) → Target Group (tg_br) → EC2 second_instance
-  └── Route to US/default origin → ALB (alb_us) → Target Group (tg_us) → EC2 first_instance
-
-
 Core AWS resources
 Networking
 VPC
