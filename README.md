@@ -74,27 +74,49 @@ This demonstrates:
 ---
 
 Core AWS resources
+
 Networking
+
 VPC
+
 2 public subnets
+
 Internet Gateway
+
 Route table + subnet associations
+
 Compute
+
 EC2 instance for US/default content
+
 EC2 instance for Brazil content
+
 Load balancing
+
 ALB for US/default origin
+
 ALB for Brazil origin
+
 Separate target groups and listeners
+
 Edge and CDN
+
 CloudFront distribution
+
 Lambda@Edge function
+
 Custom cache policy
+
 Custom origin request policy
+
 IAM
+
 Lambda execution role
+
 Basic execution logging policy attachment
+
 Project structure
+
 .
 ├── build/
 │   └── geo_router.zip
@@ -108,15 +130,24 @@ Project structure
 ├── output.tf
 ├── terraform.lock.hcl
 └── README.md
+
 Terraform versions
+
 Terraform v1.14.8
+
 AWS provider ~> 6.36.0
+
 Archive provider ~> 2.7.1
+
 Quick start
+
 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/Geo-Routed-Multi-Origin-Web-Infrastructure-on-AWS.git
-cd Geo-Routed-Multi-Origin-Web-Infrastructure-on-AWS
-2. Review the backend config
+
+2.git clone https://github.com7twoduo/Geo-Routed-Multi-Origin-Web-Infrastructure-on-AWS.git
+
+3.cd Geo-Routed-Multi-Origin-Web-Infrastructure-on-AWS
+
+4. Review the backend config
 
 Update the backend bucket if needed:
 
