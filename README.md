@@ -83,6 +83,10 @@ https://github.com/user-attachments/assets/3492f7c2-0966-43d8-91d3-71a3739647dd
 
 ## CORE AWS RESOURCES
 
+---
+
+## CORE AWS RESOURCES
+
 | Service | Role in Architecture |
 | :--- | :--- |
 | **Amazon CloudFront** | Global CDN and primary entry point. |
@@ -92,7 +96,6 @@ https://github.com/user-attachments/assets/3492f7c2-0966-43d8-91d3-71a3739647dd
 | **Amazon VPC** | Provides the isolated network infrastructure, subnets, and routing. |
 
 ---
-
 
 ##  PROJECT STRUCTURE
 
@@ -230,40 +233,80 @@ Routing decisions depend on forwarded CloudFront viewer headers, so cache and or
 
 The backend is stored in S3, and local lockfile behavior may require adjustment depending on workflow.
 
-### Why this project matters
+## 🚀 Why This Project Matters
 
-This project shows practical understanding of:
+This project highlights **production-inspired AWS edge architecture** and demonstrates how modern cloud services can be combined to build intelligent, scalable, and globally distributed routing systems.
 
-AWS networking
+Instead of stopping at a basic deployment, this repository focuses on **real infrastructure patterns** used in performance-sensitive and traffic-aware environments.
 
-Edge computing
+### ✨ What This Project Demonstrates
 
-CDN behavior
+- 🌐 **AWS networking and traffic flow design**
+- ⚡ **Edge computing with Lambda@Edge**
+- 📦 **CDN behavior and request routing with CloudFront**
+- 🧠 **Origin selection and request manipulation at the edge**
+- 🔀 **Load balancing across backend services**
+- 🏗️ **Terraform-based infrastructure provisioning**
+- 📈 **Production-inspired architecture thinking**
 
-CloudFront origin design
+---
 
-Lambda@Edge request manipulation
+## 🛠️ Built With
 
-Load balancing
+- **Terraform**
+- **Amazon CloudFront**
+- **Lambda@Edge**
+- **Application Load Balancers**
+- **Amazon EC2**
 
-Terraform-based infrastructure provisioning
+---
 
+## 🎯 Project Objective
 
+The goal of this repository is to demonstrate **practical cloud engineering skills** through a production-inspired AWS edge routing solution.
 
-Author
+It is designed to showcase more than just deployment — it emphasizes:
 
-Built as a production-inspired AWS edge routing project using:
+- intelligent request routing  
+- edge-side logic  
+- scalable backend delivery  
+- repeatable Infrastructure as Code  
+- real-world architectural decision-making  
 
-Terraform
+---
 
-CloudFront
+## 👨‍💻 About the Author
 
-Lambda@Edge
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=760&lines=Cloud+Engineer+focused+on+AWS%2C+Terraform%2C+and+automation;Building+production-inspired+infrastructure+projects;Turning+cloud+concepts+into+real-world+implementations" alt="Typing SVG" />
+</p>
 
-Application Load Balancers
+<p align="center">
+  I build hands-on cloud projects designed to reflect practical engineering work rather than simple demos.
+  My focus is on <b>AWS infrastructure</b>, <b>Infrastructure as Code</b>, <b>automation</b>, <b>security-minded design</b>,
+  and <b>real implementation patterns</b> that translate into production environments.
+</p>
 
-EC2
+<p align="center">
+  Through projects like this, I aim to demonstrate the ability to design, provision, and integrate modern cloud services
+  in ways that are scalable, structured, and operationally relevant.
+</p>
 
-The goal of this repository is to demonstrate real infrastructure patterns, not just a basic static deployment.
+<p align="center">
+  <img src="https://img.shields.io/badge/AWS-Architecting-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Terraform-Infrastructure-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" />
+  <img src="https://img.shields.io/badge/Cloud-Engineering-1F6FEB?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Automation-Building-success?style=for-the-badge" />
+</p>
 
-⭐ If this project helped you or gave you ideas, consider starring the repository.
+<p align="center">
+  <a href="https://www.linkedin.com/in/gavin-fogwe/">
+    <img src="https://img.shields.io/badge/LinkedIn-Let's%20Connect-blue?style=for-the-badge&logo=linkedin" />
+  </a>
+  <a href="https://github.com/gavinxenon0-arch">
+    <img src="https://img.shields.io/badge/GitHub-See%20More%20Projects-black?style=for-the-badge&logo=github" />
+  </a>
+  <a href="https://gavinfogwe.win/">
+    <img src="https://img.shields.io/badge/Portfolio-Explore-orange?style=for-the-badge&logo=googlechrome&logoColor=white" />
+  </a>
+</p>
