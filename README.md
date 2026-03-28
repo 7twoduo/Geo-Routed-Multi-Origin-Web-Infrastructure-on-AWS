@@ -83,68 +83,16 @@ https://github.com/user-attachments/assets/3492f7c2-0966-43d8-91d3-71a3739647dd
 
 ## CORE AWS RESOURCES
 
-<div align="center">
+| Service | Role in Architecture |
+| :--- | :--- |
+| **Amazon CloudFront** | Global CDN and primary entry point. |
+| **AWS Lambda@Edge** | Executes routing logic at edge locations based on viewer geography. |
+| **Application Load Balancer (ALB)** | Distributes traffic to the designated regional EC2 targets. |
+| **Amazon EC2** | Hosts the web servers/applications for the specific regions. |
+| **Amazon VPC** | Provides the isolated network infrastructure, subnets, and routing. |
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
-![HCL](https://img.shields.io/badge/HCL-4B5563?style=for-the-badge)
-![Terraform Language](https://img.shields.io/badge/Terraform%20Language-8B5CF6?style=for-the-badge)
-![CloudFront](https://img.shields.io/badge/CloudFront-F59E0B?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Lambda@Edge](https://img.shields.io/badge/Lambda@Edge-F59E0B?style=for-the-badge&logo=awslambda&logoColor=white)
-![Application Load Balancer](https://img.shields.io/badge/Application%20Load%20Balancer-8B5CF6?style=for-the-badge)
-![EC2](https://img.shields.io/badge/EC2-F59E0B?style=for-the-badge&logo=amazonec2&logoColor=white)
+---
 
-<br/>
-
-![Amazon VPC](https://img.shields.io/badge/Amazon%20VPC-4B5563?style=for-the-badge)
-![Networking](https://img.shields.io/badge/Networking-0EA5E9?style=for-the-badge)
-![Public Subnets](https://img.shields.io/badge/Public%20Subnets-2563EB?style=for-the-badge)
-![Multi-AZ](https://img.shields.io/badge/MultiAZ-8B5CF6?style=for-the-badge)
-![Internet Gateway](https://img.shields.io/badge/Internet%20Gateway-F59E0B?style=for-the-badge)
-![Public Access](https://img.shields.io/badge/Public%20Access-4B5563?style=for-the-badge)
-
-<br/>
-
-![Security Groups](https://img.shields.io/badge/Security%20Groups-4B5563?style=for-the-badge)
-![Stateful Firewall](https://img.shields.io/badge/Stateful%20Firewall-22C55E?style=for-the-badge)
-![IAM](https://img.shields.io/badge/IAM-4B5563?style=for-the-badge)
-![Least Privilege](https://img.shields.io/badge/Least%20Privilege-F97316?style=for-the-badge)
-![Geo Routing](https://img.shields.io/badge/Geo%20Routing-4B5563?style=for-the-badge)
-![Viewer Location](https://img.shields.io/badge/Viewer%20Location-14B8A6?style=for-the-badge)
-![Multi-Origin](https://img.shields.io/badge/Multi--Origin-8B5CF6?style=for-the-badge)
-![CloudFront CDN](https://img.shields.io/badge/CloudFront%20CDN-7C3AED?style=for-the-badge)
-
-<br/>
-
-![Edge Computing](https://img.shields.io/badge/Edge%20Computing-4B5563?style=for-the-badge)
-![Low Latency](https://img.shields.io/badge/Low%20Latency-E11D48?style=for-the-badge)
-![CDN](https://img.shields.io/badge/CDN-4B5563?style=for-the-badge)
-![Global Delivery](https://img.shields.io/badge/Global%20Delivery-0284C7?style=for-the-badge)
-![Load Balancing](https://img.shields.io/badge/Load%20Balancing-4B5563?style=for-the-badge)
-![Highly Available](https://img.shields.io/badge/Highly%20Available-9333EA?style=for-the-badge)
-![Amazon Linux](https://img.shields.io/badge/Amazon%20Linux-4B5563?style=for-the-badge)
-![EC2 Web Hosts](https://img.shields.io/badge/EC2%20Web%20Hosts-F59E0B?style=for-the-badge)
-
-<br/>
-
-![Route Tables](https://img.shields.io/badge/Route%20Tables-4B5563?style=for-the-badge)
-![Target Groups](https://img.shields.io/badge/Target%20Groups-0EA5E9?style=for-the-badge)
-![Health Checks](https://img.shields.io/badge/Health%20Checks-22C55E?style=for-the-badge)
-![Origin Request Policy](https://img.shields.io/badge/Origin%20Request%20Policy-8B5CF6?style=for-the-badge)
-![Cache Policy](https://img.shields.io/badge/Cache%20Policy-F59E0B?style=for-the-badge)
-![Archive Provider](https://img.shields.io/badge/Archive%20Provider-4B5563?style=for-the-badge)
-![Lambda Packaging](https://img.shields.io/badge/Lambda%20Packaging-6366F1?style=for-the-badge)
-
-<br/>
-
-![Infrastructure as Code](https://img.shields.io/badge/Infrastructure%20as%20Code-4B5563?style=for-the-badge)
-![Automated](https://img.shields.io/badge/Automated-6366F1?style=for-the-badge)
-![Project](https://img.shields.io/badge/Project-4B5563?style=for-the-badge)
-![Portfolio](https://img.shields.io/badge/Portfolio-22C55E?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-4B5563?style=for-the-badge)
-![Production Inspired](https://img.shields.io/badge/Production%20Inspired-64DD17?style=for-the-badge)
-
-</div>
 
 ##  PROJECT STRUCTURE
 
